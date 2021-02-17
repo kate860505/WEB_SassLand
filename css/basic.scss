@@ -1,0 +1,308 @@
+@media screen and (min-width:1000px) {
+    @import'main.scss';
+    #header{
+        .head{
+            .container{
+                display:flex;
+                justify-content: space-between;
+                align-items:center;
+                padding:30px 0;
+                .menu_btn{
+                    display:none;
+                }
+                ul{
+                    display:flex;
+                    align-items: center;
+                    margin:0;
+                }
+                .menu{
+                    width:auto;
+                    height:auto;
+                    display:flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+                    top:0;
+                    right:0;
+                    transform: translateX(0);
+                    background-color:transparent;
+                    li{
+                        padding:0;
+                        margin:10px 20px;
+                        &.active{
+                            padding:0;
+                            border-bottom: 1px solid #fff;
+                        }
+                    }
+                    a{
+                        padding:0;
+                        margin-bottom: 5px;
+                        font-size:15px;
+                        color:#fff;
+                        border-bottom:none;
+                        &::after{
+                            content:'';
+                            width:0%;
+                            height:1px;
+                            position: absolute;
+                            left:0;
+                            bottom:-6px;
+                            border-bottom:1px solid #fff;
+                            transition: width .25s .1s;
+                        }
+                        &:hover{
+                            &::after{
+                                width:100%;
+                            }
+                        }
+                    }
+                }
+                
+                .log{
+                    display:flex;
+                    li{
+                        margin: 0px 15px;
+                    }
+                    a{
+                        text-transform: capitalize;
+                        display: inline-block;
+                        padding:0;
+                        font-size:15px;
+                        color:#fff;
+                        border-bottom:none;
+                    }
+                    .active{
+                        background-color: #fff;
+                        padding:2px 5px;
+                        border-radius:40px 40px 0 40px;
+                        a{
+                            padding:10px 20px;
+                            @extend %text_blue;
+                        }
+                    }
+                }
+            }
+        }
+        .banner{
+            .row{
+                .pic{
+                    position: relative;
+                    padding:0 30px;
+                    .women{
+                        position: absolute;
+                        top:-200px;
+                        left:100px;
+                        width:177px;
+                        margin:0 auto;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .phone{
+                        width:470px;
+                        bottom:0px;
+                        left:0px;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    #contant{
+        .customers{
+            .row{
+                .img{
+                    .top{
+                        width:530px;
+                    }
+                    .middle{
+                        width: 420px;
+                    }
+                    .buttom{
+                        width: 420px;
+                    }
+                }
+            }
+
+        }
+        .Send_targeted{
+            .container{
+                .row{
+                    .img{
+                        order:1;
+                        .talk{
+                            width:200px;
+                            position:absolute;
+                            top:20%;
+                            left:23%;
+                            z-index:2;
+                        }
+                        .plant{
+                            width:62px;
+                            position: absolute;
+                            right:85px;
+                            bottom:0;
+                            z-index:2;
+                        }
+                        .top{
+                            position: relative;
+                            width: 204px;
+                            left:70px;
+                            z-index:1;
+                        }
+                        .buttom{
+                            width:470px;
+                            left:120px;
+                            position: absolute;
+                            top:0;
+                        }
+                    }
+                }
+            }
+        }
+        .widget{
+            .text{
+                p{
+                    padding:0 200px;
+                }
+            }
+            .img{
+                width:2400px;
+                position: absolute;
+                bottom:-20px;
+                left:-880px;
+                transform: translateX(12%);
+            }
+        }
+    }
+    #footer{
+        .top_footer{
+            .col-md-6{
+                &:nth-child(2){
+                    padding-left:80px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:768px) {
+    @import'main.scss';
+    #header{
+        .banner{
+            .container{
+                margin-top: 100px;
+                .row{
+                    display:flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .text{
+                        padding:0 30px;
+                        h1{
+                            font-size: 40px;
+                        }
+                        p{
+                        font-size: 16px;
+                        font-weight: 400;
+                        margin-top: 30px;
+                        color:#fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #contant{
+        .customers{
+            padding-top:70px;
+            .row{
+                .text{
+                    margin-top: 0;
+                }
+            }
+        }
+        .Send_targeted{
+            padding-top:20px;
+            .row{
+                .img{
+                    order:1;
+                    .top{
+                        left:70px;
+                        position: relative;
+                    }
+                    .buttom{
+                        left:120px;
+                        position: absolute;
+                        top:0;
+                    }
+                    .talk{
+                        width: 155px;
+                        position: absolute;
+                        top:20%;
+                        left:20%;
+                        z-index:2;
+                    }
+                    .plant{
+                        width:62px;
+                        position: absolute;
+                        right:30px;
+                        bottom:0;
+                        z-index:2;
+                    }
+                }
+                .text{
+                    margin-top: 0;
+                }
+            }
+        }
+        .pricing{
+            .billed{
+                width: 330px;
+                display:flex;
+                justify-content:space-between;
+                align-items: center;
+                margin:70px auto 50px;
+            }
+        }
+        .widget{
+            .text{
+                .title{
+                    font-size:40px;
+                }
+                p{
+                    padding:0 200px;
+                }
+            }
+        }
+    }  
+    #footer{
+        .top_footer{
+            margin-bottom:50px;
+            .col-md-6{
+                .logo_item{
+                    width: 250px;
+                }
+            }
+        }
+        .bottom_footer{
+            padding:10px 0;
+            a{
+                margin-top: 0;
+            }
+            .container{
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .copyright{
+                margin-top: 0px;
+            }
+        }
+
+    } 
+}
+
